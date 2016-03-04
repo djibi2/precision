@@ -1,4 +1,4 @@
-{% set virtualbox_version='5.0' %}
+{% set virtualbox_version = '5.0' %}
 
 virtualbox-repo:
   pkgrepo.managed:
@@ -21,7 +21,7 @@ virtualbox_ext_pack:
             cd /tmp;
             wget -qO - https://www.virtualbox.org/wiki/Downloads |
             grep "vbox-extpack" |
-            grep {{virtualbox.version}} |
+            grep {{virtualbox_version}} |
             sed "s/.\+\(http:\/\/download.virtualbox.org.\+.vbox-extpack\).\+/\1/" |
             xargs wget -O Oracle_VM_VirtualBox_Extension_Pack.vbox-extpack &&
             vboxmanage extpack install Oracle_VM_VirtualBox_Extension_Pack.vbox-extpack &&
