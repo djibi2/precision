@@ -1,9 +1,3 @@
-install_vim:
-  vim:
-    config:
-      syntax: 'on'
-    settings:
-        nocompatible:
-# Don't know how to config
-# execute pathogen#infect()
-# filetype plugin indent on
+base:
+  install_vim:
+    - vim
